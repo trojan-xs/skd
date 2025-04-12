@@ -1,0 +1,15 @@
+- name: server1
+  user: username1
+  host: 192.168.0.10
+  port: 22
+  key_type: ed25519
+  aliases: [srv1, internal]
+  password: changeme
+
+- name: server2
+  user: username2
+  host: server2.example.com
+  port: 2222
+  key_type: rsa
+  aliases: [srv2, external]
+  password: changeme
