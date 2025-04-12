@@ -46,12 +46,12 @@
 ## YAML Format
 
 ```yaml
-- name: ingress
-  user: deploy
-  host: 192.168.1.10
+- name: server1
+  user: myusername
+  host: 1.2.3.4
   port: 22
   key_type: ed25519
-  aliases: [web, proxy, ingress]
+  aliases: [alias1, alias2, alias3]
   password: yourpassword
 ```
 
@@ -82,12 +82,4 @@
 
 ---
 
-## License
 
-MIT
-
----
-
-## Author
-
-Maintained by [YourNameHere]. Contributions welcome.
