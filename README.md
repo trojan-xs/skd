@@ -7,9 +7,9 @@
  \__ \   < (_| |_\__ \ | | |
  |___/_|\_\__,_(_)___/_| |_|
 ```
-# skd - SSH Key Deployment Tool
+# skadoosh (skd) - SSH Key Deployment Tool
 
-**skd** is a lightweight Bash script for automating SSH key generation and deployment across multiple remote hosts. It supports both interactive and YAML-configured batch modes, with optional debug logging and a clear summary of deployment results.
+**skadoosh** is a lightweight Bash script for automating SSH key generation and deployment across multiple remote hosts. It supports both interactive and YAML-configured batch modes, with optional debug logging and a clear summary of deployment results.
 
 ---
 
