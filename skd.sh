@@ -198,6 +198,22 @@ fi
 # yq setup
 if ! command -v yq >/dev/null 2>&1; then
   echo -e "${YLW}[!] yq not found. Downloading temporary copy...${NC}"
+
+# Temporary sshpass install if missing
+TMP_SSHPASS="/tmp/sshpass_$$"
+
+if ! command -v sshpass >/dev/null 2>&1; then
+  echo -e "${YLW}[!] sshpass not found. Downloading and compiling temporary copy...${NC}"
+  curl -sSL https://ftp.gnu.org/gnu/sshpass/sshpass-1.09.tar.gz -o /tmp/sshpass.tar.gz
+  tar -xzf /tmp/sshpass.tar.gz -C /tmp
+  cd /tmp/sshpass-1.09
+  ./configure --prefix="$TMP_SSHPASS" >/dev/null 2>&1
+  make >/dev/null 2>&1
+  make install >/dev/null 2>&1
+  export PATH="$TMP_SSHPASS/bin:$PATH"
+  cd - >/dev/null
+fi
+
   curl -sL https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -o "$TMP_YQ"
   chmod +x "$TMP_YQ"
   YQ="$TMP_YQ"
