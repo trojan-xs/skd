@@ -92,3 +92,8 @@
 ---
 
 
+## Quick Install
+
+```bash
+curl -sSL https://raw.githubusercontent.com/trojan-xs/skd/main/skd.sh -o skd.sh && chmod +x skd.sh && ./skd.sh
+
